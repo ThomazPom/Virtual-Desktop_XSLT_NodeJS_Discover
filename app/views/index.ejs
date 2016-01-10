@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Virtual desktop</title>
+</head>
+<body>
+	<div id="waiter">
+		<img src="/images/loading.gif"/>
+		<div class="meter">
+			<span></span>
+			<h3 style="color:white">Chargement en cours : <text>0%</text></h3>
+		</div>
+	</div>
+	<div id="bg" ></div>
+	<div id="content">
+		<div id="divContent" class="divContent" style="display:none">
+			<div class="divFrame" >
+				<nav id="navbarFrame" class="navbar navbar-inverse">
+					<a target="blank" href="#" class="dropdown-toggle navbar-brand">
+					</a><a onclick="$(this).parent().parent().parent().remove()" style="float:right" class="dropdown-toggle navbar-brand">Fermer :
+					<span style="color:red" class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+				</nav>
+
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-bottom" id="navbarBot">
+		<ul class="nav navbar-nav navbar-right social">
+			<li>
+				<a class="navbar-brand appicon" id="linkExplorer">Explorer les données<span style="color:cyan" class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right social">
+			<li>
+				<a class="navbar-brand appicon" id="linkMap">Afficher la carte des établissements <span style="color:cyan" class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right social">
+			<li>
+				<a class="navbar-brand appicon" id="linkStatistic">Afficher ou télécharger les statistiques<span style="color:cyan" class="glyphicon glyphicon-stats" aria-hidden="true"></span></a>
+			</li>
+		</ul>
+	</nav>
+	<link rel="stylesheet" type="text/css" href="/styles/Css.css">
+	<link rel="stylesheet" href="/styles/jquery-ui.css">
+	<script src="/scripts/jquery-1.10.2.js"></script>
+	<script src="/scripts/jquery-ui.js"></script>
+	<script src="/scripts/jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" href="/styles/bootstrap.min.css">
+	<link rel="stylesheet" href="/styles/bootstrap-theme.min.css">
+	<script src="/scripts/bootstrap.min.js"></script>
+	<script src="/scripts/masonry.pkgd.js"></script>
+	<script type="text/javascript" src="/scripts/JS.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVh1mJ-DvhZOZUsb40ehjooUTUaCa3_M"></script>
+</body>
+</html>
