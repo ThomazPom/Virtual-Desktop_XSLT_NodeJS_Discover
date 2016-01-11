@@ -1,4 +1,4 @@
-
+#IMPORTANT -> REQUIS : NodeJS>=5.20
 ##Virtual Desktop :
 ###Application NODEJS/WEB permetant d'exploiter des OpenData
 ####INSTRUCTIONS
@@ -6,13 +6,13 @@
 Télécharger et extraire les fichiers de la Solution Virtual Desktop Release
 
 #####Pour windows :
-* 1-Installer node JS
+* 1-Installer node JS NodeJS>=5.20
 	* LIEN->			https://nodejs.org/en/download/
 * 2-Installer BaseX
 	* LIEN->			http://basex.org/products/download/all-downloads/
 
 #####Pour Linux(MacOS?)
-* 1-Télécharger nodeJS et l'ajouter au PATH si nécéssaire
+* 1-Télécharger nodeJS NodeJS>=5.20 et l'ajouter au PATH si nécéssaire
 	* LIEN->			https://nodejs.org/en/download/
 * 2-Installer baseX :
 	* COMMANDE->		sudo apt-get install basex
