@@ -1,4 +1,4 @@
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:colors="colors:colors" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+﻿<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:colors="colors:colors" xmlns:fo="http://www.w3.org/1999/XSL/Format">
 	<xsl:output encoding="UTF-8" indent="yes" method="xml" standalone="no" omit-xml-declaration="no"/>
 	<xsl:variable name="colors" select="document('')/*/colors:colors/color"/>
 	<xsl:variable name="colorCount" select="count($colors)"/>
@@ -240,22 +240,6 @@
 				<xsl:with-param name="maxpos" select="$maxpos"/>
 			</xsl:call-template>
 		</xsl:if>
-	</xsl:template>
-	<xsl:template match="nombre" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/2000/svg" >
-		<xsl:param name="decalage" select="0"/>
-		<xsl:param name="total" select="1"/>
-		<xsl:param name="position" select="1"/>
-		<xsl:variable name="nombre"  select="."/>
-		<xsl:variable name="portion" select="$nombre div $total *942"/>
-		<xsl:variable name="couleur" select="$colors[$position mod $colorCount + 1]"/>
-		<circle r="150" cx="150" cy="150"  fill-opacity="0" style='stroke:{$couleur};stroke-width: 200;
-			stroke-dasharray: 0,{$decalage},{$portion+3},942;'>
-		</circle>
-		<xsl:apply-templates select="following-sibling::nombre[1]"> 
-			<xsl:with-param name="decalage" select="$decalage + $portion"/>
-			<xsl:with-param name="total" select="$total"/>
-			<xsl:with-param name="position" select="$position +1"/>
-		</xsl:apply-templates> 
 	</xsl:template>
 	<colors:colors>
 		<color>olive</color>
